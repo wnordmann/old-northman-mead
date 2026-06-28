@@ -7,7 +7,7 @@ const Sidebar = () => {
         <div className="flex flex-col items-center mb-12">
           {/* Using the extracted logo slice */}
           <Link to="/">
-             <img src="/assets/home_logo.png" alt="Old Northmen's Mead Logo" className="w-24 mb-4 object-contain brightness-150 contrast-125" />
+             <img src={`${import.meta.env.BASE_URL}assets/home_logo.png`} alt="Old Northmen's Mead Logo" className="w-24 mb-4 object-contain brightness-150 contrast-125" />
           </Link>
           <h1 className="text-center text-xl font-bold leading-tight">OLD<br/>NORTHMEN'S<br/>MEAD</h1>
         </div>

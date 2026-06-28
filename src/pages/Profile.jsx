@@ -16,35 +16,35 @@ const flavorData = {
   'apple-spiced': {
     title: 'Apple-Spiced',
     subtitle: 'Illuminates.',
-    bottleImg: '/assets/bottles/Image of AppleSpiced Bottle.png',
+    bottleImg: import.meta.env.BASE_URL + 'assets/bottles/Image of AppleSpiced Bottle.png',
     description: 'A warm, inviting blend that illuminates the spirit. Crisp apple notes meld with traditional spices.',
     color: '#b95133'
   },
   'herbal': {
     title: 'Herbal',
     subtitle: 'Restores.',
-    bottleImg: '/assets/bottles/Image of Herbal Bottle.png',
+    bottleImg: import.meta.env.BASE_URL + 'assets/bottles/Image of Herbal Bottle.png',
     description: 'A restorative infusion of earth and meadow. Grounding, pure, and deeply connected to nature.',
     color: '#5c6c4c'
   },
   'holiday-spiced': {
     title: 'Holiday-Spiced',
     subtitle: 'Reflects.',
-    bottleImg: '/assets/bottles/Image of Holiday-Spiced Bottle.png',
+    bottleImg: import.meta.env.BASE_URL + 'assets/bottles/Image of Holiday-Spiced Bottle.png',
     description: 'A festive reflection of the season. Rich, complex, and meant for moments of shared joy.',
     color: '#8b2b2d'
   },
   'oak-n-orange': {
     title: 'Oak-N-Orange',
     subtitle: 'Welcomes.',
-    bottleImg: '/assets/bottles/Image of OakNOrange Bottle.png',
+    bottleImg: import.meta.env.BASE_URL + 'assets/bottles/Image of OakNOrange Bottle.png',
     description: 'A welcoming expression where the bright zest of orange meets the sturdy depth of oak.',
     color: '#d27c2f'
   },
   'odrerir': {
     title: 'Óðrerir',
     subtitle: 'Inspires.',
-    bottleImg: '/assets/bottles/Image of Odrerir Bottle.png',
+    bottleImg: import.meta.env.BASE_URL + 'assets/bottles/Image of Odrerir Bottle.png',
     description: 'The legendary draught that inspires poetry and wisdom. A masterful, classic mead.',
     color: '#c69f69'
   }

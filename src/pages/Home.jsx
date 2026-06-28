@@ -23,7 +23,7 @@ const Home = () => {
             initial={{ scale: 1.1 }}
             animate={{ scale: 1 }}
             transition={{ duration: 2, ease: "easeOut" }}
-            src="/assets/home_hero.png" 
+            src={`${import.meta.env.BASE_URL}assets/home_hero.png`}
             alt="Hero Background" 
             className="h-full object-cover opacity-80" 
           />
@@ -48,7 +48,7 @@ const Home = () => {
       {/* 2. The Craft Section */}
       <section className="relative min-h-screen w-full flex flex-col md:flex-row items-center bg-[#e6dfcc] overflow-hidden border-b-[8px] border-[#1c1a17]">
         <div className="w-full md:w-1/2 h-full min-h-[50vh] flex items-center justify-center p-8">
-           <img src="/assets/home_craft.png" alt="Pouring Mead" className="max-h-[80vh] w-auto object-contain drop-shadow-2xl" />
+           <img src={`${import.meta.env.BASE_URL}assets/home_craft.png`} alt="Pouring Mead" className="max-h-[80vh] w-auto object-contain drop-shadow-2xl" />
         </div>
         
         <div className="w-full md:w-1/2 p-16 md:p-32 flex flex-col justify-center">
@@ -74,7 +74,7 @@ const Home = () => {
       {/* 3. Nature's Gift Section */}
       <section className="relative min-h-screen w-full flex flex-col md:flex-row-reverse items-center bg-[#1c1a17] overflow-hidden border-b-[8px] border-[#c69f69]/20">
         <div className="w-full md:w-1/2 h-full min-h-[50vh] flex items-center justify-center p-8">
-           <img src="/assets/home_nature.png" alt="Meadowsweet" className="max-h-[80vh] w-auto object-contain drop-shadow-2xl" />
+           <img src={`${import.meta.env.BASE_URL}assets/home_nature.png`} alt="Meadowsweet" className="max-h-[80vh] w-auto object-contain drop-shadow-2xl" />
         </div>
         
         <div className="w-full md:w-1/2 p-16 md:p-32 flex flex-col justify-center">
@@ -102,7 +102,7 @@ const Home = () => {
       {/* 4. The Five Expressions Section */}
       <section className="relative min-h-screen w-full flex flex-col md:flex-row items-center bg-[#d8cfaa] overflow-hidden">
         <div className="w-full md:w-1/2 h-full min-h-[50vh] flex items-center justify-center p-8">
-           <img src="/assets/home_expressions.png" alt="The Founder" className="max-h-[80vh] w-auto object-contain drop-shadow-2xl" />
+           <img src={`${import.meta.env.BASE_URL}assets/home_expressions.png`} alt="The Founder" className="max-h-[80vh] w-auto object-contain drop-shadow-2xl" />
         </div>
         
         <div className="w-full md:w-1/2 p-16 md:p-24 flex flex-col justify-center">
@@ -153,7 +153,7 @@ const Home = () => {
         </div>
         
         <div className="w-full md:w-1/2 h-full min-h-[50vh] flex items-center justify-center p-8">
-           <img src="/assets/home_shared.png" alt="Fellowship" className="max-h-[80vh] w-auto object-contain drop-shadow-2xl" />
+           <img src={`${import.meta.env.BASE_URL}assets/home_shared.png`} alt="Fellowship" className="max-h-[80vh] w-auto object-contain drop-shadow-2xl" />
         </div>
       </section>
 
@@ -180,7 +180,7 @@ const Home = () => {
         </div>
 
         <div className="w-full md:w-1/2 h-full min-h-[50vh] flex items-center justify-center p-8">
-           <img src="/assets/home_credo.png" alt="Credo Texture" className="max-h-[80vh] w-auto object-contain drop-shadow-2xl" />
+           <img src={`${import.meta.env.BASE_URL}assets/home_credo.png`} alt="Credo Texture" className="max-h-[80vh] w-auto object-contain drop-shadow-2xl" />
         </div>
       </section>
 

@@ -22,7 +22,7 @@ const Craft = () => {
             initial={{ scale: 1.1 }}
             animate={{ scale: 1 }}
             transition={{ duration: 2, ease: "easeOut" }}
-            src="/assets/craft_hero.png" 
+            src={`${import.meta.env.BASE_URL}assets/craft_hero.png`}
             alt="Craft Hero Background" 
             className="h-full object-cover opacity-80" 
           />
@@ -42,7 +42,7 @@ const Craft = () => {
       {/* 2. Content 1 Section */}
       <section className="relative min-h-screen w-full flex flex-col md:flex-row items-center bg-[#e6dfcc] overflow-hidden border-b-[8px] border-[#1c1a17]">
         <div className="w-full md:w-1/2 h-full min-h-[50vh] flex items-center justify-center p-8">
-           <img src="/assets/craft_content1.png" alt="Crafting Process" className="max-h-[80vh] w-auto object-contain drop-shadow-2xl" />
+           <img src={`${import.meta.env.BASE_URL}assets/craft_content1.png`} alt="Crafting Process" className="max-h-[80vh] w-auto object-contain drop-shadow-2xl" />
         </div>
         
         <div className="w-full md:w-1/2 p-16 md:p-32 flex flex-col justify-center">
@@ -65,7 +65,7 @@ const Craft = () => {
       {/* 3. Content 2 Section */}
       <section className="relative min-h-screen w-full flex flex-col md:flex-row-reverse items-center bg-[#1c1a17] overflow-hidden">
         <div className="w-full md:w-1/2 h-full min-h-[50vh] flex items-center justify-center p-8">
-           <img src="/assets/craft_content2.png" alt="Crafting Tools" className="max-h-[80vh] w-auto object-contain drop-shadow-2xl" />
+           <img src={`${import.meta.env.BASE_URL}assets/craft_content2.png`} alt="Crafting Tools" className="max-h-[80vh] w-auto object-contain drop-shadow-2xl" />
         </div>
         
         <div className="w-full md:w-1/2 p-16 md:p-32 flex flex-col justify-center">
@@ -93,7 +93,7 @@ const Craft = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: false }}
               transition={{ duration: 1.5 }}
-              src="/assets/craft_content3.png" 
+              src={`${import.meta.env.BASE_URL}assets/craft_content3.png`}
               alt="Mead Hall" 
               className="max-w-full max-h-[90vh] object-contain drop-shadow-2xl" 
             />

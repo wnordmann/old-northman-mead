@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none">
+  <!-- Background matching site theme color #1c1a17 -->
+  <rect width="1920" height="1080" fill="#1c1a17"/>
+  
+  <!-- Subtle inner parchment / gold border -->
+  <rect x="40" y="40" width="1840" height="1000" rx="16" stroke="#c69f69" stroke-width="3" stroke-opacity="0.3" stroke-dasharray="16 12"/>
+  
+  <!-- Cross grid lines representing artwork canvas -->
+  <line x1="40" y1="40" x2="1880" y2="1040" stroke="#c69f69" stroke-opacity="0.08" stroke-width="2"/>
+  <line x1="1880" y1="40" x2="40" y2="1040" stroke="#c69f69" stroke-opacity="0.08" stroke-width="2"/>
+  
+  <!-- Centered Placeholder Badge -->
+  <g transform="translate(960, 540)">
+    <!-- Dark glass backing -->
+    <rect x="-350" y="-100" width="700" height="200" rx="20" fill="#161412" fill-opacity="0.85" stroke="#c69f69" stroke-width="2" stroke-opacity="0.5"/>
+    
+    <!-- Text Label -->
+    <text text-anchor="middle" y="-20" fill="#e6dfcc" font-family="system-ui, -apple-system, sans-serif" font-size="42" font-weight="800" letter-spacing="4">
+      PLACEHOLDER 1920px by 1080px
+    </text>
+    
+    <text text-anchor="middle" y="35" fill="#c69f69" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="600" letter-spacing="3">
+      16:9 FULL-WIDTH HERO BACKGROUND ARTWORK
+    </text>
+    
+    <text text-anchor="middle" y="70" fill="#e6dfcc" fill-opacity="0.6" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="400" letter-spacing="1">
+      (Target file: public/assets/home_hero.png)
+    </text>
+  </g>
+</svg>

@@ -103,6 +103,13 @@ const Profile = () => {
     setTimeout(() => setIsProcured(false), 4000);
   };
 
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="flex flex-col w-full min-h-screen bg-[#1c1a17]">
       
@@ -131,11 +138,11 @@ const Profile = () => {
         </div>
 
         {/* Section Quick Jump Links */}
-        <div className="flex items-center gap-6 text-xs text-[#c69f69] tracking-widest uppercase">
-          <a href="#overview" className="hover:text-white transition-colors">Overview</a>
-          <a href="#flavor-profile" className="hover:text-white transition-colors">Flavor Notes</a>
-          <a href="#builder" className="hover:text-white transition-colors">Batch Builder</a>
-          <a href="#procure" className="hover:text-white transition-colors">Procure</a>
+        <div className="flex items-center gap-4 md:gap-6 text-xs text-[#c69f69] tracking-widest uppercase">
+          <button onClick={() => scrollToSection('overview')} className="hover:text-white transition-colors cursor-pointer">Overview</button>
+          <button onClick={() => scrollToSection('flavor-profile')} className="hover:text-white transition-colors cursor-pointer">Flavor Notes</button>
+          <button onClick={() => scrollToSection('builder')} className="hover:text-white transition-colors cursor-pointer">Batch Builder</button>
+          <button onClick={() => scrollToSection('procure')} className="hover:text-white transition-colors cursor-pointer">Procure</button>
         </div>
       </div>
 

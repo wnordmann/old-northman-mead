@@ -204,7 +204,7 @@ const Home = () => {
       </section>
 
       {/* 5. Shared Section */}
-      <section className="relative min-h-screen w-full flex flex-col md:flex-row items-center bg-[#1c1a17] overflow-hidden border-t-8 border-[#c69f69]/20 py-12 md:py-0">
+      <section id="fellowship" className="relative min-h-screen w-full flex flex-col md:flex-row items-center bg-[#1c1a17] overflow-hidden border-t-8 border-[#c69f69]/20 py-12 md:py-0">
         {/* 40% Width Text Container */}
         <div className="w-full md:w-[40%] p-10 md:p-20 flex flex-col justify-center">
            <FadeInUp delay={0.1}>
@@ -241,7 +241,7 @@ const Home = () => {
       </section>
 
       {/* 6. Credo Section */}
-      <section className="relative min-h-[80vh] w-full flex flex-col md:flex-row items-center bg-[#e6dfcc] overflow-hidden py-12 md:py-0">
+      <section id="credo" className="relative min-h-[80vh] w-full flex flex-col md:flex-row items-center bg-[#e6dfcc] overflow-hidden py-12 md:py-0">
         {/* 40% Width Text Container */}
         <div className="w-full md:w-[40%] p-10 md:p-20 flex flex-col justify-center text-left">
            <FadeInUp delay={0.1}>

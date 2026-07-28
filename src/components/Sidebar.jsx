@@ -61,6 +61,12 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             <Link to="/craft" className="hover:text-white transition-colors duration-300 flex items-center gap-2">
               <span>⚒️</span> THE CRAFT
             </Link>
+            <Link to="/#fellowship" className="hover:text-white transition-colors duration-300 flex items-center gap-2">
+              <span>⚔️</span> FELLOWSHIP
+            </Link>
+            <Link to="/#credo" className="hover:text-white transition-colors duration-300 flex items-center gap-2">
+              <span>🛡️</span> THE FOUNDER'S CREDO
+            </Link>
           </nav>
         </div>
 

@@ -141,8 +141,7 @@ const Profile = () => {
         <div className="flex items-center gap-4 md:gap-6 text-xs text-[#c69f69] tracking-widest uppercase">
           <button onClick={() => scrollToSection('overview')} className="hover:text-white transition-colors cursor-pointer">Overview</button>
           <button onClick={() => scrollToSection('flavor-profile')} className="hover:text-white transition-colors cursor-pointer">Flavor Notes</button>
-          <button onClick={() => scrollToSection('builder')} className="hover:text-white transition-colors cursor-pointer">Batch Builder</button>
-          <button onClick={() => scrollToSection('procure')} className="hover:text-white transition-colors cursor-pointer">Procure</button>
+          <button onClick={() => scrollToSection('builder')} className="hover:text-white transition-colors cursor-pointer">Mead Builder & Procure</button>
         </div>
       </div>
 
@@ -536,7 +535,7 @@ const Profile = () => {
       </section>
 
       {/* 5. Discover Other Expressions Section */}
-      <section id="procure" className="relative min-h-[50vh] flex flex-col items-center justify-center p-16 bg-[#e6dfcc]">
+      <section id="expressions" className="relative min-h-[50vh] flex flex-col items-center justify-center p-16 bg-[#e6dfcc]">
          <FadeInUp delay={0.1}>
            <h2 className="text-4xl font-bold text-[#1c1a17] mb-8 uppercase tracking-widest font-['Oswald']">
              Explore Other Hall Expressions

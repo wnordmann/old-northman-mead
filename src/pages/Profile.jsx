@@ -25,6 +25,7 @@ const flavorData = {
     abv: '14.5%',
     sweetness: 'Semi-Sweet',
     barrel: 'Toasted French Oak',
+    sensory: { sweetness: 75, oak: 65, botanical: 80, spice: 95 },
     notes: ['Crisp Apple', 'Cinnamon Bark', 'Wild Honey', 'Meadowsweet Bloom'],
     pairings: ['Roasted Pork', 'Aged Cheddar', 'Spiced Honey Cakes'],
   },
@@ -38,6 +39,7 @@ const flavorData = {
     abv: '13.8%',
     sweetness: 'Off-Dry',
     barrel: 'Neutral Slavonian Oak',
+    sensory: { sweetness: 45, oak: 50, botanical: 100, spice: 40 },
     notes: ['Meadowsweet', 'Wild Sage', 'Pine Resin', 'Goldenrod Honey'],
     pairings: ['Wild Game', 'Herb Crust Goat Cheese', 'Roasted Root Vegetables'],
   },
@@ -51,6 +53,7 @@ const flavorData = {
     abv: '15.2%',
     sweetness: 'Sweet Reserve',
     barrel: 'Charred American Oak',
+    sensory: { sweetness: 90, oak: 85, botanical: 75, spice: 100 },
     notes: ['Star Anise', 'Orange Peel', 'Dark Forest Honey', 'Nutmeg'],
     pairings: ['Venison Stew', 'Dark Chocolate', 'Solstice Feasts'],
   },
@@ -64,6 +67,7 @@ const flavorData = {
     abv: '14.0%',
     sweetness: 'Semi-Dry',
     barrel: 'Heavy Toasted White Oak',
+    sensory: { sweetness: 65, oak: 100, botanical: 70, spice: 75 },
     notes: ['Blood Orange Zest', 'Vanilla Oak', 'Raw Blossom Honey', 'Caramel'],
     pairings: ['Smoked Salmon', 'Hard Alpine Cheeses', 'Tarte Tatin'],
   },
@@ -77,6 +81,7 @@ const flavorData = {
     abv: '16.0%',
     sweetness: 'Classic Traditional',
     barrel: 'Heritage Oak Casks',
+    sensory: { sweetness: 85, oak: 70, botanical: 95, spice: 60 },
     notes: ['Pure Raw Honey', 'Meadowsweet Nectar', 'Golden Amber', 'Elderflower'],
     pairings: ['Feast Roasts', 'Smoked Meats', 'Hall Celebrations'],
   }
@@ -101,6 +106,13 @@ const Profile = () => {
   const handleProcure = () => {
     setIsProcured(true);
     setTimeout(() => setIsProcured(false), 4000);
+  };
+
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -131,11 +143,10 @@ const Profile = () => {
         </div>
 
         {/* Section Quick Jump Links */}
-        <div className="flex items-center gap-6 text-xs text-[#c69f69] tracking-widest uppercase">
-          <a href="#overview" className="hover:text-white transition-colors">Overview</a>
-          <a href="#flavor-profile" className="hover:text-white transition-colors">Flavor Notes</a>
-          <a href="#builder" className="hover:text-white transition-colors">Batch Builder</a>
-          <a href="#procure" className="hover:text-white transition-colors">Procure</a>
+        <div className="flex items-center gap-4 md:gap-6 text-xs text-[#c69f69] tracking-widest uppercase">
+          <button onClick={() => scrollToSection('overview')} className="hover:text-white transition-colors cursor-pointer">Overview</button>
+          <button onClick={() => scrollToSection('flavor-profile')} className="hover:text-white transition-colors cursor-pointer">Flavor Notes</button>
+          <button onClick={() => scrollToSection('builder')} className="hover:text-white transition-colors cursor-pointer">Mead Builder & Procure</button>
         </div>
       </div>
 
@@ -248,40 +259,40 @@ const Profile = () => {
                   <div>
                     <div className="flex justify-between text-xs text-[#e6dfcc] uppercase mb-1">
                       <span>Honey Sweetness</span>
-                      <span className="text-[#c69f69] font-bold">75%</span>
+                      <span className="text-[#c69f69] font-bold">{data.sensory.sweetness}%</span>
                     </div>
                     <div className="w-full h-2.5 bg-black/60 rounded-full overflow-hidden border border-[#c69f69]/30">
-                      <div className="h-full bg-gradient-to-r from-[#c69f69] to-[#e6dfcc] w-[75%]" />
+                      <div className="h-full bg-gradient-to-r from-[#c69f69] to-[#e6dfcc] transition-all duration-500" style={{ width: `${data.sensory.sweetness}%` }} />
                     </div>
                   </div>
 
                   <div>
                     <div className="flex justify-between text-xs text-[#e6dfcc] uppercase mb-1">
                       <span>Oak Cask Depth</span>
-                      <span className="text-[#c69f69] font-bold">85%</span>
+                      <span className="text-[#c69f69] font-bold">{data.sensory.oak}%</span>
                     </div>
                     <div className="w-full h-2.5 bg-black/60 rounded-full overflow-hidden border border-[#c69f69]/30">
-                      <div className="h-full bg-gradient-to-r from-[#c69f69] to-[#e6dfcc] w-[85%]" />
+                      <div className="h-full bg-gradient-to-r from-[#c69f69] to-[#e6dfcc] transition-all duration-500" style={{ width: `${data.sensory.oak}%` }} />
                     </div>
                   </div>
 
                   <div>
                     <div className="flex justify-between text-xs text-[#e6dfcc] uppercase mb-1">
                       <span>Botanical Herb Notes</span>
-                      <span className="text-[#c69f69] font-bold">90%</span>
+                      <span className="text-[#c69f69] font-bold">{data.sensory.botanical}%</span>
                     </div>
                     <div className="w-full h-2.5 bg-black/60 rounded-full overflow-hidden border border-[#c69f69]/30">
-                      <div className="h-full bg-gradient-to-r from-[#c69f69] to-[#e6dfcc] w-[90%]" />
+                      <div className="h-full bg-gradient-to-r from-[#c69f69] to-[#e6dfcc] transition-all duration-500" style={{ width: `${data.sensory.botanical}%` }} />
                     </div>
                   </div>
 
                   <div>
                     <div className="flex justify-between text-xs text-[#e6dfcc] uppercase mb-1">
                       <span>Spice Finish</span>
-                      <span className="text-[#c69f69] font-bold">80%</span>
+                      <span className="text-[#c69f69] font-bold">{data.sensory.spice}%</span>
                     </div>
                     <div className="w-full h-2.5 bg-black/60 rounded-full overflow-hidden border border-[#c69f69]/30">
-                      <div className="h-full bg-gradient-to-r from-[#c69f69] to-[#e6dfcc] w-[80%]" />
+                      <div className="h-full bg-gradient-to-r from-[#c69f69] to-[#e6dfcc] transition-all duration-500" style={{ width: `${data.sensory.spice}%` }} />
                     </div>
                   </div>
                 </div>
@@ -529,7 +540,7 @@ const Profile = () => {
       </section>
 
       {/* 5. Discover Other Expressions Section */}
-      <section id="procure" className="relative min-h-[50vh] flex flex-col items-center justify-center p-16 bg-[#e6dfcc]">
+      <section id="expressions" className="relative min-h-[50vh] flex flex-col items-center justify-center p-16 bg-[#e6dfcc]">
          <FadeInUp delay={0.1}>
            <h2 className="text-4xl font-bold text-[#1c1a17] mb-8 uppercase tracking-widest font-['Oswald']">
              Explore Other Hall Expressions

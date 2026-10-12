@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import ImageExtensionPlaceholder from '../components/ImageExtensionPlaceholder';
 import NorseSectionDivider from '../components/NorseSectionDivider';
 
 const FadeInUp = ({ children, delay = 0 }) => (
@@ -29,14 +28,6 @@ const Craft = () => {
             className="w-full h-[75vh] md:h-[80vh] object-cover object-top opacity-90" 
           />
 
-          {/* Reusable Extension Placeholder Component */}
-          <ImageExtensionPlaceholder 
-            targetWidth={1920}
-            targetHeight={1080}
-            aspectRatio="16:9"
-            description="Required Full-Width Craft Hero Banner Artwork"
-            className="absolute bottom-0 left-0 right-0 h-[35vh]"
-          />
 
           {/* Dual opacity gradient overlays */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#1c1a17] via-[#1c1a17]/80 to-transparent pointer-events-none" />
@@ -70,13 +61,6 @@ const Craft = () => {
              alt="Crafting Process" 
              className="max-h-[70vh] w-auto object-contain drop-shadow-2xl mb-6" 
            />
-           <ImageExtensionPlaceholder 
-             targetWidth={1200}
-             targetHeight={1200}
-             aspectRatio="1:1"
-             description="60% Width Crafting Process Artwork"
-             className="w-full max-w-xl rounded-xl shadow-xl"
-           />
         </div>
         
         {/* 40% Width Text Container */}
@@ -105,13 +89,6 @@ const Craft = () => {
              src={`${import.meta.env.BASE_URL}assets/craft_content2.png`} 
              alt="Crafting Tools" 
              className="max-h-[70vh] w-auto object-contain drop-shadow-2xl mb-6" 
-           />
-           <ImageExtensionPlaceholder 
-             targetWidth={1200}
-             targetHeight={1600}
-             aspectRatio="3:4"
-             description="60% Width Crafting Tools & Fermentation Artwork"
-             className="w-full max-w-xl rounded-xl shadow-xl"
            />
         </div>
         
@@ -144,13 +121,6 @@ const Craft = () => {
               src={`${import.meta.env.BASE_URL}assets/craft_content3.png`}
               alt="Mead Hall" 
               className="max-w-full max-h-[70vh] object-contain drop-shadow-2xl mb-8" 
-            />
-            <ImageExtensionPlaceholder 
-              targetWidth={1920}
-              targetHeight={1080}
-              aspectRatio="16:9"
-              description="Panoramic Mead Hall Interior Artwork"
-              className="w-full max-w-4xl rounded-xl shadow-xl"
             />
          </div>
       </section>

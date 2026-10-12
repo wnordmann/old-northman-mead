@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import ImageExtensionPlaceholder from '../components/ImageExtensionPlaceholder';
 import NorseSectionDivider from '../components/NorseSectionDivider';
 
 const FadeInUp = ({ children, delay = 0 }) => (
@@ -31,14 +30,6 @@ const Home = () => {
             className="w-full h-[75vh] md:h-[80vh] object-cover object-top opacity-90" 
           />
           
-          {/* Reusable Extension Placeholder Component */}
-          <ImageExtensionPlaceholder 
-            targetWidth={1920}
-            targetHeight={1080}
-            aspectRatio="16:9"
-            description="Required Full-Width Canvas Height for Artist Artwork"
-            className="absolute bottom-0 left-0 right-0 h-[35vh]"
-          />
 
           {/* Dual opacity gradient overlays for contrast & legibility */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#1c1a17] via-[#1c1a17]/80 to-transparent pointer-events-none" />
@@ -81,14 +72,6 @@ const Home = () => {
              alt="Pouring Mead" 
              className="max-h-[70vh] w-auto object-contain drop-shadow-2xl mb-6" 
            />
-           {/* Placeholder Overlay for 60% Section Artwork */}
-           <ImageExtensionPlaceholder 
-             targetWidth={1200}
-             targetHeight={1600}
-             aspectRatio="3:4"
-             description="60% Width Section Craft Artwork Graphic"
-             className="w-full max-w-xl rounded-xl shadow-xl"
-           />
         </div>
         
         {/* 40% Width Text Content Container */}
@@ -120,14 +103,6 @@ const Home = () => {
              src={`${import.meta.env.BASE_URL}assets/home_nature.png`} 
              alt="Meadowsweet" 
              className="max-h-[70vh] w-auto object-contain drop-shadow-2xl mb-6" 
-           />
-           {/* Placeholder Overlay for 60% Botanical Artwork */}
-           <ImageExtensionPlaceholder 
-             targetWidth={1200}
-             targetHeight={1600}
-             aspectRatio="3:4"
-             description="60% Width Section Botanical Artwork Graphic"
-             className="w-full max-w-xl rounded-xl shadow-xl"
            />
         </div>
         
@@ -162,14 +137,6 @@ const Home = () => {
              src={`${import.meta.env.BASE_URL}assets/home_expressions.png`} 
              alt="The Founder" 
              className="max-h-[70vh] w-auto object-contain drop-shadow-2xl mb-6" 
-           />
-           {/* Placeholder Overlay for 60% Artwork */}
-           <ImageExtensionPlaceholder 
-             targetWidth={1200}
-             targetHeight={1600}
-             aspectRatio="3:4"
-             description="60% Width Section Five Expressions Artwork Graphic"
-             className="w-full max-w-xl rounded-xl shadow-xl"
            />
         </div>
         
@@ -229,14 +196,6 @@ const Home = () => {
              alt="Fellowship" 
              className="max-h-[70vh] w-auto object-contain drop-shadow-2xl mb-6" 
            />
-           {/* Placeholder Overlay for 60% Fellowship Artwork */}
-           <ImageExtensionPlaceholder 
-             targetWidth={1200}
-             targetHeight={1600}
-             aspectRatio="3:4"
-             description="60% Width Section Fellowship Artwork Graphic"
-             className="w-full max-w-xl rounded-xl shadow-xl"
-           />
         </div>
       </section>
 
@@ -268,14 +227,6 @@ const Home = () => {
              src={`${import.meta.env.BASE_URL}assets/home_credo.png`} 
              alt="Credo Texture" 
              className="max-h-[70vh] w-auto object-contain drop-shadow-2xl mb-6" 
-           />
-           {/* Placeholder Overlay for 60% Credo Artwork */}
-           <ImageExtensionPlaceholder 
-             targetWidth={1200}
-             targetHeight={1600}
-             aspectRatio="3:4"
-             description="60% Width Section Credo Runic Texture Artwork"
-             className="w-full max-w-xl rounded-xl shadow-xl"
            />
         </div>
       </section>

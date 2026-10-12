@@ -5,7 +5,9 @@ import Home from './pages/Home';
 import Craft from './pages/Craft';
 import Profile from './pages/Profile';
 import { MixedBoxProvider } from './context/MixedBoxContext';
+import { ImageReviewerProvider } from './context/ImageReviewerContext';
 import MixedBoxDrawer from './components/MixedBoxDrawer';
+import ImageReviewerDock from './components/ImageReviewerDock';
 
 // Helper component that automatically resets window scroll position on route changes
 const ScrollToTop = () => {
@@ -20,19 +22,22 @@ const ScrollToTop = () => {
 
 function App() {
   return (
-    <MixedBoxProvider>
-      <Router>
-        <ScrollToTop />
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/craft" element={<Craft />} />
-            <Route path="/profile/:flavor" element={<Profile />} />
-          </Routes>
-        </Layout>
-        <MixedBoxDrawer />
-      </Router>
-    </MixedBoxProvider>
+    <ImageReviewerProvider>
+      <MixedBoxProvider>
+        <Router>
+          <ScrollToTop />
+          <Layout>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/craft" element={<Craft />} />
+              <Route path="/profile/:flavor" element={<Profile />} />
+            </Routes>
+          </Layout>
+          <MixedBoxDrawer />
+          <ImageReviewerDock />
+        </Router>
+      </MixedBoxProvider>
+    </ImageReviewerProvider>
   );
 }
 

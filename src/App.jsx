@@ -6,9 +6,8 @@ import Craft from './pages/Craft';
 import Profile from './pages/Profile';
 import { lazy, Suspense } from 'react';
 
-// Hidden image review page: dev-only, not linked anywhere. Lazy-loaded so it
-// (and the images it globs) are excluded from production builds.
-const Review = import.meta.env.DEV ? lazy(() => import('./pages/Review')) : null;
+// Hidden image review page: not linked anywhere, lazy-loaded.
+const Review = lazy(() => import('./pages/Review'));
 import { MixedBoxProvider } from './context/MixedBoxContext';
 import MixedBoxDrawer from './components/MixedBoxDrawer';
 
